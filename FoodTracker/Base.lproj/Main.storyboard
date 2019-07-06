@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="trailing" secondItem="H7n-dF-Jgr" secondAttribute="trailing" id="s2L-aT-9mg"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fSp-IP-eCv">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="fSp-IP-eCv">
                                 <rect key="frame" x="27" y="232" width="321" height="321"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fSp-IP-eCv" secondAttribute="height" multiplier="1:1" id="pwx-fG-mjj"/>
@@ -74,4 +74,7 @@
             <point key="canvasLocation" x="138.40000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="540" height="540"/>
+    </resources>
 </document>
