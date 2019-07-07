@@ -18,17 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BAh-jH-wlV">
-                                <rect key="frame" x="20" y="40" width="335" height="160"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BAh-jH-wlV">
+                                <rect key="frame" x="20" y="40" width="335" height="461.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAY-sA-4h0">
-                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="80"/>
+                                        <rect key="frame" x="124.5" y="0.0" width="86.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7n-dF-Jgr">
-                                        <rect key="frame" x="0.0" y="88" width="335" height="32"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="335" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="ehX-8s-kxD"/>
                                         </constraints>
@@ -36,54 +36,38 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0u-9S-Kzx">
-                                        <rect key="frame" x="0.0" y="128" width="151" height="32"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="fSp-IP-eCv">
+                                        <rect key="frame" x="0.0" y="68.5" width="335" height="335"/>
+                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="mZd-pG-b99"/>
+                                            <constraint firstAttribute="width" secondItem="fSp-IP-eCv" secondAttribute="height" multiplier="1:1" id="pwx-fG-mjj"/>
                                         </constraints>
-                                        <state key="normal" title="Set Default Label Text"/>
                                         <connections>
-                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kee-vK-zUq"/>
+                                            <outletCollection property="gestureRecognizers" destination="Vkg-IF-p8A" appends="YES" id="kTU-OP-bmy"/>
                                         </connections>
-                                    </button>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jzc-fQ-szk" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="71.5" y="411.5" width="192" height="50"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                <size key="value" width="32" height="32"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="H7n-dF-Jgr" secondAttribute="trailing" id="s2L-aT-9mg"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="fSp-IP-eCv">
-                                <rect key="frame" x="27" y="232" width="321" height="321"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="fSp-IP-eCv" secondAttribute="height" multiplier="1:1" id="pwx-fG-mjj"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Vkg-IF-p8A" appends="YES" id="kTU-OP-bmy"/>
-                                </connections>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jzc-fQ-szk" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                <rect key="frame" x="20" y="557" width="192" height="32"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
-                                        <size key="value" width="32" height="32"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Jzc-fQ-szk" firstAttribute="top" secondItem="fSp-IP-eCv" secondAttribute="bottom" constant="4" id="0Nv-vK-PZk"/>
                             <constraint firstItem="BAh-jH-wlV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="9JI-Kc-DyD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BAh-jH-wlV" secondAttribute="trailing" constant="20" id="DTx-Kf-rkB"/>
-                            <constraint firstItem="fSp-IP-eCv" firstAttribute="top" secondItem="BAh-jH-wlV" secondAttribute="bottom" constant="32" id="Gwk-NY-EJ4"/>
-                            <constraint firstItem="Jzc-fQ-szk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="O2s-Ki-Qbe"/>
                             <constraint firstItem="BAh-jH-wlV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gbe-26-RmW"/>
-                            <constraint firstItem="fSp-IP-eCv" firstAttribute="centerX" secondItem="BAh-jH-wlV" secondAttribute="centerX" id="mdj-S4-w0c"/>
-                            <constraint firstItem="fSp-IP-eCv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="oA3-tR-gUz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fSp-IP-eCv" secondAttribute="bottom" constant="114" id="tHj-7R-9bH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -91,6 +75,7 @@
                         <outlet property="mealNameLabel" destination="mAY-sA-4h0" id="Y5H-9S-g7y"/>
                         <outlet property="nameTextField" destination="H7n-dF-Jgr" id="5dN-76-Jvo"/>
                         <outlet property="photoImageView" destination="fSp-IP-eCv" id="E16-Y1-Zyt"/>
+                        <outlet property="ratingControl" destination="Jzc-fQ-szk" id="dBi-l3-cPo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
