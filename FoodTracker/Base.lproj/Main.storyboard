@@ -61,16 +61,25 @@
                                     <outletCollection property="gestureRecognizers" destination="Vkg-IF-p8A" appends="YES" id="kTU-OP-bmy"/>
                                 </connections>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jzc-fQ-szk" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                <rect key="frame" x="27" y="557" width="200" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jzc-fQ-szk" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="557" width="192" height="32"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="32" height="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Jzc-fQ-szk" firstAttribute="top" secondItem="fSp-IP-eCv" secondAttribute="bottom" constant="4" id="0Nv-vK-PZk"/>
                             <constraint firstItem="BAh-jH-wlV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="9JI-Kc-DyD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BAh-jH-wlV" secondAttribute="trailing" constant="20" id="DTx-Kf-rkB"/>
                             <constraint firstItem="fSp-IP-eCv" firstAttribute="top" secondItem="BAh-jH-wlV" secondAttribute="bottom" constant="32" id="Gwk-NY-EJ4"/>
+                            <constraint firstItem="Jzc-fQ-szk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="O2s-Ki-Qbe"/>
                             <constraint firstItem="BAh-jH-wlV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gbe-26-RmW"/>
                             <constraint firstItem="fSp-IP-eCv" firstAttribute="centerX" secondItem="BAh-jH-wlV" secondAttribute="centerX" id="mdj-S4-w0c"/>
                             <constraint firstItem="fSp-IP-eCv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="oA3-tR-gUz"/>
