@@ -14,6 +14,7 @@
 		161937D722D0439000FD37CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 161937D522D0439000FD37CE /* LaunchScreen.storyboard */; };
 		161937E222D0439000FD37CE /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161937E122D0439000FD37CE /* FoodTrackerTests.swift */; };
 		161937ED22D1871900FD37CE /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161937EC22D1871900FD37CE /* RatingControl.swift */; };
+		161937EF22D2D97B00FD37CE /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161937EE22D2D97B00FD37CE /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		161937E122D0439000FD37CE /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		161937E322D0439000FD37CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		161937EC22D1871900FD37CE /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		161937EE22D2D97B00FD37CE /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				161937CE22D0438F00FD37CE /* ViewController.swift */,
 				161937EC22D1871900FD37CE /* RatingControl.swift */,
 				161937D022D0438F00FD37CE /* Main.storyboard */,
+				161937EE22D2D97B00FD37CE /* Meal.swift */,
 				161937D322D0439000FD37CE /* Assets.xcassets */,
 				161937D522D0439000FD37CE /* LaunchScreen.storyboard */,
 				161937D822D0439000FD37CE /* Info.plist */,
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161937EF22D2D97B00FD37CE /* Meal.swift in Sources */,
 				161937CF22D0438F00FD37CE /* ViewController.swift in Sources */,
 				161937ED22D1871900FD37CE /* RatingControl.swift in Sources */,
 				161937CD22D0438F00FD37CE /* AppDelegate.swift in Sources */,
